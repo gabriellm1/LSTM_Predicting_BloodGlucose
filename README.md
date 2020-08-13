@@ -33,6 +33,9 @@ There were used 4 adolescent patients:
 
 You can check the model training in the [BG_Predictions.ipynb](https://github.com/gabriellm1/LSTM_Predicting_BloodGlucose/blob/master/BG_Predictions.ipynb) file. The code has a lot of comments for your deep understanding.
 
+The model is set to receive 20 data points in the past and predict 6 points in the future. Considering the delta between each CGM signal equal to 5 minutes, 
+the model is using 100 minutes before to predict 30 minutes ahead. Long carbs usually take around 90 minutes to be ingested and most of the insulins have their peak at 60-90 minutes. With that in mind, the 20 last points were used to predict the next 6.
+
 After training the model with part of patient's 8 data, the resulting model was applied to the rest of the patient 8 data:
 
 #### Patient 08 Test Results - RSME: 15,10
