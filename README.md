@@ -67,12 +67,12 @@ others, as you can see in the table below.
 
 ### Project Development
 
-The development of this project was part of a technical initiation research.
+    The development of this project was part of a technical initiation research.
 
-Student - Gabriel Monteiro - @gabriellm1
+    Student - Gabriel Monteiro - @gabriellm1
 
-Tutor - Rafael Corsi @rafaelcorsi
+    Tutor - Rafael Corsi @rafaelcorsi
 
-Computer Engineering 
-Insper 2019-2020
-São Paulo, Brazil
+    Computer Engineering 
+    Insper 2019-2020
+    São Paulo, Brazil
