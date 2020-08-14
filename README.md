@@ -1,4 +1,4 @@
-# Using LSTM to predict Blood Glucose
+# Using Machine Learning to predict Blood Glucose
 
 ## Motivation
 
@@ -27,23 +27,35 @@ There were used 4 adolescent patients:
   - Patient 1 was a patient with good blood glucose time in range.
   - Patient 10 was a patient with a medium blood glucose time in range.
 
-![alt text]()
+![alt text](https://github.com/gabriellm1/LSTM_Predicting_BloodGlucose/blob/master/imgs/BGs.png)
 
 ## Training and testing
 
 You can check the model training in the [BG_Predictions.ipynb](https://github.com/gabriellm1/LSTM_Predicting_BloodGlucose/blob/master/BG_Predictions.ipynb) file. The code has a lot of comments for your deep understanding.
 
+The model is set to receive 20 data points in the past and predict 6 points in the future. Considering the delta between each CGM signal equal to 5 minutes, 
+the model is using 100 minutes before to predict 30 minutes ahead. Long carbs usually take around 90 minutes to be ingested and most of the insulins have their peak at 60-90 minutes. With that in mind, the 20 last points were used to predict the next 6.
+
 After training the model with part of patient's 8 data, the resulting model was applied to the rest of the patient 8 data:
 
-![alt text]()
+#### Patient 08 Test Results - RSME: 15,10
+
+![alt text](https://github.com/gabriellm1/LSTM_Predicting_BloodGlucose/blob/master/imgs/test_result.png)
 
 With the model validated, it was applied to the next three patients:
 
-![alt text]()
+#### Patient 01 Results - RSME: 5,15
 
-![alt text]()
+![alt text](https://github.com/gabriellm1/LSTM_Predicting_BloodGlucose/blob/master/imgs/patient01.png)
 
-![alt text]()
+#### Patient 10 Results - RSME: 5,82
+
+![alt text](https://github.com/gabriellm1/LSTM_Predicting_BloodGlucose/blob/master/imgs/patient10.png)
+
+#### Patient 07 Results - RSME: 15,6
+
+![alt text](https://github.com/gabriellm1/LSTM_Predicting_BloodGlucose/blob/master/imgs/patient07.png)
+
 
 In the end, the model performed really well. The RSME( Root-Square-Mean Error) was the error variable used to evaluate the model's results.
 
@@ -53,17 +65,17 @@ Seeking for a deeper validation, the [Baseline_Comparisons.ipynb](https://github
 models for the same patients. After running all patient's data for each model, the LSTM model finished with the best performance against all 
 others, as you can see in the table below.
 
-![alt text](https://github.com/gabriellm1/LSTM_Predicting_BloodGlucose/blob/master/imgs/baselines.jpeg)
+![alt text](https://github.com/gabriellm1/LSTM_Predicting_BloodGlucose/blob/master/imgs/baselines.png)
 
 
 ### Project Development
 
-The development of this project was part of a technical initiation research.
+    The development of this project was part of a technical initiation research.
 
-Student - Gabriel Monteiro - @gabriellm1
+    Student - Gabriel Monteiro - @gabriellm1
 
-Tutor - Rafael Corsi @rafaelcorsi
+    Tutor - Rafael Corsi @rafaelcorsi
 
-Computer Engineering 
-Insper 2019-2020
-São Paulo, Brazil
+    Computer Engineering 
+    Insper 2019-2020
+    São Paulo, Brazil
